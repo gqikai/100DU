@@ -24,85 +24,36 @@
 /* end public */
 
 /* layout */
+.wrapper{width: 710px;font-family: "微软雅黑";background-color: #FFFFFF}
+.wrapper .activity {width: 350px; height: 800px;background-color: #eeeeee}
+.wrapper .recommend {width: 350px; height: 800px;background-color: #dddddd}
 
-#header, #nav, .content {width:960px; margin:0 auto;}
+.activity .new_title {height: 70px;background-color: #cccccc; position: relative;}
+.activity h2 {background: url(../img/new_title_bg.gif) no-repeat right 0;}
+.new_title strong {position: absolute; top: 22px; left: 24px;color: #ea2b31;font-size: 12px;}
+.new_title span  {position: absolute; top: 36px; left: 24px;color: #333333;font-size: 24px;font-weight: normal;}
+.new_title em  {position: absolute; top: 26px; right: 106px;color: #ec1c16;font-size: 36px;font-weight: bold;}
+.activity .today{padding: 16px 25px 0 25px;}
+.today .text {width: 204px; float: right;}
+.today .text .title {height: 32px; line-height: 25px;}
+.today .text .title strong{display: inline-block; width:25px; height: 25px; text-align: center; border: 1px solid #d2d2d2}
 
-#search, .section, .side_section, .ad_border, #footer { border:1px solid #dbdbdb; border-radius:6px;}
-.section, .options, .main_ad, .side_section, .side_ad, .ad_border{ margin-bottom: 10px;}
-
-body {margin-bottom:30px;}
-#header { height:30px; border-radius:0 0 6px 6px;}
-#nav { height: 100px; background:#FFC;}
-#search {width:958px; height:114px; margin:0 auto 10px;position: relative;}
-.main {width:710px;}
-.section {width:318px; padding:0 15px;}
-.options {width:350px; position:relative; height:200px;}
-.main_ad { border-radius:6px; overflow:hidden;}
-.side {width:240px;}
-.side_section { height:60px; padding:0 12px;}
-.side_ad { border-radius:6px; overflow:hidden;}
-.ad_border {width:238px; height:88px; overflow:hidden;}
-#footer {width:958px; height:78px; margin:0 auto; background:#f9f9f9;}
-.options .nav {height:34px; position:relative;}
-.options .nav li {width: 172px; height:33px; border: 1px solid #dbdbdb; border-bottom:none; border-radius:6px 6px 0 0;}
-.options .nav .active {width: 172px; height:34px; background:#fff;}
-.options .con {width:318px; padding: 0 15px; border:1px solid #dbdbdb; border-radius: 0 0 6px 6px;}
-
-#header .city {float: left;line-height: 30px;}
-#header .city a {display:inline-block; height: 18px; line-height: 18px; background: #fff; border: 1px solid #e5e5e5; border-radius: 2px; box-shadow: 1px 1px 0 #ededed;color: #999999; text-decoration: none;}
-#header .city a:hover {color: #d60d03;}
-
-#header .link {float:right; line-height:30px;}
-#header .link a {}
-#header .link a:hover {}
-.triangle_up, .triangle_down_red, .triangle_down_gray { position:absolute; width:0; height:0; overflow:hidden; border-left:4px solid transparent; border-right:4px solid transparent; }
-.triangle_up { border-bottom:4px solid #ca0309; }
-.triangle_down_red { border-top:4px solid #ca0309; }
-.triangle_down_gray { border-top:4px solid #c4bdbd; }
-
-#nav {position: relative;}
-#nav .nav_1{position: absolute; top: 10px;}
-#nav .nav_1 li{display: inline-block;}
-#nav .nav_1 li a{display: block; width: 66px; padding-top: 50px; text-align:center;background: url(../img/nav_bg.png);}
-#nav h1{display: block; width: 223px; height: 62px; margin: 0 auto; position: relative;
-    top: 10px; background: url(../img/logo.png) no-repeat;}
-#nav .nav_2 {position: absolute; top: 10px; right: 0px;}
-#nav .nav_2 li{display: inline-block; width: 66px; height: 66px;}
-#nav .nav_2 .bg1{display: block; padding-top: 50px; background: url(../img/nav_bg.png); text-align: center;}
-#nav .nav_1 .bg5{background-position: -264px 0;}
-
-
-#search .menu {margin-left: 226px;position: absolute; top: -10px;z-index: 0;}
-#search .menu li {float: left; width: 78px; height: 26px; margin-left: 1px;border: 1px solid #f8d0bf;text-align: center; line-height: 25px;background-color: #e21c01;
-    font-size:14px; border-radius: 5px 5px 0 0;box-shadow: 3px 3px #999999
+.activity .calender h3{display: block; height: 34px; width: 298px; line-height: 34px; padding-left: 25px; background-color: #bbbbbb;}
+.calender {
+    width: 323px;
+    padding-left: 25px;
+    position: relative;
 }
-#search .bar{height: 66px; background: #e21c01;margin-top: 16px; border-radius: 6px; box-shadow: 3px 3px #999;z-index: 2;position:absolute; width: inherit;}
-#search .bar p{float: right; padding-top:30px;}
-#search .img{width:163px; height:122px; background: url("../img/search_img.png");position:absolute; left:32px; top:-3px;z-index: 3;}
-#search .form { position:absolute; left:226px; top:36px; z-index:3; }
-#search .form .text{ width:380px; height:22px; line-height:22px;background:#fff1ef; border-radius:3px; float:left; margin-right:10px; font-size:12px; font-family:'微软雅黑'; color:#ea7a7a; box-shadow:inset 2px 2px 3px rgba(0,0,0,0.25);border:none;padding:0 12px;}
-#search .form .btn { width:63px; height:26px; border:none; background:url(../img/search_img.png) no-repeat -163px 0; float:left; }
-#search .key_text { z-index: 3;width:206px; color:#fff; line-height:18px; position:absolute; top:30px; right:36px; }
-#search .key_text a { color:#fff; }
-#search .key_text a:hover { text-decoration:underline; }
-#search .update { width:405px; height:30px; position:absolute; left:226px; bottom:0; background:url(../img/search_img.png) no-repeat -226px 8px; }
-#search .update .wrap{width:336px; height:30px; overflow:hidden; position:relative; left:60px; line-height: 30px;}
-
-.content .main .video_title {height: 42px; line-height: 42px; background: url(../img/video_bg.gif) no-repeat 105px 10px;}
-.content .main .video {display:block; height: 285px; background: url(../img/play_bg.gif); margin-bottom: 13px;}
-.content .main .video_list {padding-left: 75px; background: url(../img/video_bg.gif) no-repeat 3px -47px;height: 78px;}
-.content .main .video_list li {line-height: 20px;
-    text-indent: 14px;}
-
-.con .main .options .nav .active{line-height: 34px;text-align: center; position: relative;}
-.con .main .options .nav .active .triangle_down_red{position: absolute; top: 14px; right: 12px;}
-
-.con .hot_list{padding-top: 10px;}
-.con .hot_list li {width: 318px;  height: 98px; background-color: #999999; padding-top: 10px; margin-bottom: 6px;background: url(../img/hot_list_li_bg.gif);}
-.con .hot_list .img{display: inline-block;}
-.con .hot_list .describe{width: 190px;display: inline-block; float: right;}
-.hot_list h3 { line-height: 24px; font-size: 12px;background-colorpadding-bottom: 6px;}
-.hot_list h3 a { font-weight: normal; color: #bb0d0d;}
-.hot_list p { line-height: 16px; color: #6e6e6e;}
-
-.main_adv{display: block; width: 710px; height: 90px;}
+.calender ol li {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 2px 2px 0;
+    background: #ededed;
+    float: left;
+    text-align: center;
+    position: relative;
+    font-weight: bold;
+    color: #666;
+    font-family: arial;
+}
