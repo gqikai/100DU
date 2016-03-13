@@ -34,9 +34,3 @@ body { font-size:12px; font-family:"微软雅黑"; }
 .triangle_down_red { border-top:4px solid #ca0309; }
 .triangle_down_gray { border-top:4px solid #c4bdbd; }
 /* end public */
-
-.wrapper {width: 348px; height: 498px; background: #929292;}
-.title { height: 70px; position: relative; background: url(../img/new_title_bg.gif) no-repeat right -70px; }
-.title strong { font-size: 12px; font-family: arial; color: #ea2b31; top: 19px;  position: absolute; left: 24px; }
-.title span { font-size: 24px; color: #333; top: 31px; font-weight: normal; position: absolute; left: 24px;}
-.show_images {width: 294px; height: 168px;background: #6e6e6e;}

@@ -4,30 +4,38 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link href="css/my_style.css" rel="stylesheet" >
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <style>
+        .wrapper {margin: 10px; width: 350px; height: 330px; border: 1px solid #dbdbdb; border-radius: 6px;padding: 0 15px;}
+        .wrapper .bbs h2 {position: relative; }
+        .wrapper .bbs h2 strong {line-height: 40px; color:#cc0d13; font-family: arial; font-size: 12px;}
+        .wrapper .bbs h2 strong span{color: black;}
+        .wrapper .bbs h2 a {position: absolute; top: 15px; right: 0;}
+        .bbs-list li {height: 30px; line-height: 30px; margin-bottom: 3px; background: #f8f8f8; border-radius: 6px; vertical-align: middle; position: relative;}
+        .bbs-list b{float: right;}
+    </style>
+
+
 </head>
 <body>
 <div class="wrapper">
-    <div class="title">
-        <strong>RECOMMEND</strong>
-        <span>精彩推荐</span>
+    <div class="bbs">
+        <h2>
+            <strong>BBS<span>论坛</span></strong>
+            <a><img src="img/more.gif"></a>
+        </h2>
+        <ul class="bbs-list">
+            <li><strong>01</strong><a>保你没见过的古怪餐厅</a><b>世说新语</b></li>
+            <li class="active"><strong>01</strong><a>保你没见过的古怪餐厅</a><b>世说新语</b></li>
+            <li><strong>01</strong><a>保你没见过的古怪餐厅</a><b>世说新语</b></li>
+            <li><strong>01</strong><a>保你没见过的古怪餐厅</a><b>世说新语</b></li>
+            <li><strong>01</strong><a>保你没见过的古怪餐厅</a><b>世说新语</b></li>
+            <li><strong>01</strong><a>保你没见过的古怪餐厅</a><b>世说新语</b></li>
+            <li><strong>01</strong><a>保你没见过的古怪餐厅</a><b>世说新语</b></li>
+        </ul>
     </div>
 
-    <div class="show_images">
-        <div class="images">
-
-
-            
-        </div>
-        <p>爸爸去哪儿啦~</p>
-    </div>
-    <ul class="articles">
-        <li >
-            <img src="img/content/recommend_list_ico1.gif">
-            <p class="|">|</p>
-            <a href="#">生活中哪些商品的包装有缺陷呢</a>
-            <p class="date">14/02/17</p>
-        </li>
-    </ul>
 </div>
+
 </body>
 </html>

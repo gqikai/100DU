@@ -155,11 +155,11 @@ $(function (){
 		function fnFade() {
 			aUlLi.each(function (i){
 				if ( i != iNow ) {
-					aUlLi.eq(i).fadeOut().css('zIndex', 1);
+					aUlLi.eq(i).fadeOut();
 					aOlLi.eq(i).removeClass('active');
 
 				} else {
-					aUlLi.eq(i).fadeIn().css('zIndex', 2);
+					aUlLi.eq(i).fadeIn();
 					aOlLi.eq(i).addClass('active');
 				}
 			});
