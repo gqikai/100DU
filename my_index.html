@@ -35,20 +35,81 @@
                 var intervalFunc = function () {
                     position = position % 8;
                     var top = '-' + position * lineHeight + 'px';
-                    $ul.css('top',top);
+                    $ul.animate({'top': top},1000,'elasticOut');
+
                     position ++;
                 }
-                var timer = window.setInterval(intervalFunc,1000);
+                var timer = window.setInterval(intervalFunc,4000);
 
                 $ul.hover(function () {
                     clearInterval(timer);
                 }, function () {
-                    timer = window.setInterval(intervalFunc,1000);
+                    timer = window.setInterval(intervalFunc,4000);
                 })
+
+                $('#updateDownBtn').click(function () {
+                    position --;
+                    intervalFunc();
+                });
+
+                $('#updateUpBtn').click(function () {
+                    position ++;
+                    intervalFunc();
+                })
+            })();
+
+            (function () {
+
+                var fnTab = function (navs, cons, action) {
+                    $lis = navs.find('li');
+                    $lis.each(function (index) {
+                        $(this).on(action, function () {
+                            $lis.removeClass('active').addClass('gradient');
+                            $(this).addClass('active');
+
+                            cons.hide();
+                            $(cons[index]).show();
+                        })
+                    });
+                }
+                fnTab($(".tabNav1"),$('.tabCon1'),'click');
+                fnTab($('.tabNav2'),$('.tabCon2'),'click');
+                fnTab($('.tabNav3'),$('.tabCon3'),'click');
+                fnTab($('.tabNav4'),$('.tabCon4'),'click');
 
             })();
 
+            (function () {
+                var $content = $('.recommend .pic');
+                var $ul = $content.find('ul');
+                var $ol = $content.find('ol');
 
+                var now = 0;
+                var timeFunc = function () {
+                    now = now % 3;
+                    var $lis = $ul.find('li');
+                    $lis.hide().eq(now).show();
+
+                    var $lis2 = $ol.children();
+                    $lis2.removeClass('active').eq(now).addClass('active');
+                    now ++;
+                };
+
+                var timer = setInterval(timeFunc,2000);
+
+                $ol.children().each(function (index) {
+                    $(this).on('click', function () {
+                        $ul.children().hide().eq(index).show();
+                        $ol.children().removeClass('active').eq(index).addClass('active');
+                    });
+                    $(this).hover(function () {
+                        clearInterval(timer);
+                    }, function () {
+                        timer = setInterval(timeFunc,2000);
+                    })
+                })
+
+            })();
         });
 
 
