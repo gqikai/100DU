@@ -9,11 +9,45 @@
     <script src="js/tween.js"></script>
     <script>
         $(function () {
-            $('#menu li').click(function () {
-                $('#menu li').removeClass('active').eq($(this).index()).addClass('active');
-                var tips = ['搜店','地址','全文','优惠券','视频'];
-                $('.search .form input:eq(0)').attr('value',tips[$(this).index()]);
-            });
+            (function(){
+                var arrData = [
+                    { 'name':'萱萱', 'time':4, 'title':'那些灿烂华美的瞬间', 'url':'http://www.miaov.com/2013/' },
+                    { 'name':'畅畅', 'time':5, 'title':'广东3天抓获涉黄疑犯', 'url':'http://www.miaov.com/2013/#curriculum' },
+                    { 'name':'萱萱', 'time':6, 'title':'国台办回应王郁琦', 'url':'http://www.miaov.com/2013/#about' },
+                    { 'name':'畅畅', 'time':7, 'title':'那些灿烂华美的瞬间', 'url':'http://www.miaov.com/2013/#message' },
+                    { 'name':'萱萱', 'time':8, 'title':'那些灿烂华美的瞬间', 'url':'http://www.miaov.com/2013/' },
+                    { 'name':'畅畅', 'time':9, 'title':'广东3天抓获涉黄疑犯', 'url':'http://www.miaov.com/2013/#curriculum' },
+                    { 'name':'萱萱', 'time':10, 'title':'国台办回应王郁琦', 'url':'http://www.miaov.com/2013/#about' },
+                    { 'name':'畅畅', 'time':11, 'title':'那些灿烂华美的瞬间', 'url':'http://www.miaov.com/2013/#message' }
+                ];
+                //<li><a href="http://www.miaov.com/2013"><strong>萱萱</strong> <span>5分钟前</span> 写了一篇新文章：那些灿烂华美的瞬间…</a></li>
+                var $ul = $('#search .update .wrap ul');
+
+
+                for(var i = 0; i <arrData.length; i ++){
+                    $ul.append('<li><a href="http://www.miaov.com/2013"><strong>萱萱</strong> <span>5分钟前</span> 写了一篇新文章：' + arrData[i].title+'…</a></li>');
+                }
+
+                var lineHeight = 30;
+                var position = 0;
+
+                var intervalFunc = function () {
+                    position = position % 8;
+                    var top = '-' + position * lineHeight + 'px';
+                    $ul.css('top',top);
+                    position ++;
+                }
+                var timer = window.setInterval(intervalFunc,1000);
+
+                $ul.hover(function () {
+                    clearInterval(timer);
+                }, function () {
+                    timer = window.setInterval(intervalFunc,1000);
+                })
+
+            })();
+
+
         });
 
 
@@ -99,7 +133,7 @@
     <div class="update">
         <div class="wrap">
             <ul>
-                <!--<li><a href="http://www.miaov.com/2013"><strong>萱萱</strong> <span>5分钟前</span> 写了一篇新文章：那些灿烂华美的瞬间…</a></li>-->
+                <li><a href="http://www.miaov.com/2013"><strong>萱萱</strong> <span>5分钟前</span> 写了一篇新文章：那些灿烂华美的瞬间…</a></li>
             </ul>
         </div>
         <a id="updateUpBtn" href="javascript:;" class="triangle_up"></a>
